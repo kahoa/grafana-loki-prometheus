@@ -6,20 +6,30 @@ server:
 
 ingester:
   wal:
-    dir: /tmp/wal
+    dir: /tmp/loki/wal
+  lifecycler:
+    ring:
+      kvstore:
+        store: inmemory
+      replication_factor: 1
+
+schema_config:
+  configs:
+    - from: 2022-10-24
+      store: boltdb
+      object_store: filesystem
+      schema: v11
+      index:
+        prefix: index_
+      chunks:
+        prefix: chunk_
 
 storage_config:
-  boltdb_shipper:
-    active_index_directory: /tmp/loki/index
-    cache_location: /tmp/loki/cache
-
-chunk_store_config:
-  boltdb_shipper:
-    active_index_directory: /tmp/loki/index
-    cache_location: /tmp/loki/cache
-
-compactor:
-  compaction_retention_enabled: true
+  boltdb:
+    directory: /tmp/loki/index
+  filesystem:
+    directory: /tmp/loki/chunks
 
 limits_config:
-  max_log_line_size: 1048576
+  reject_old_samples: true
+  reject_old_samples_max_age: 168h  # Keep logs for 7 days
