@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 10s
+
+scrape_configs:
+  - job_name: 'nodejs-metrics'
+    static_configs:
+      - targets: ['<public-ip-anwendung-ec2>:3000'] # The Express app exposing metrics

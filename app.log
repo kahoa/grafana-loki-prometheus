@@ -1,0 +1,13 @@
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2024-11-15T10:56:20.401Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:58:40.441Z"}
+{"level":"info","message":"Incoming request: GET /work","timestamp":"2024-11-15T10:58:59.419Z"}
+{"level":"info","message":"Incoming request: GET /metrics","timestamp":"2024-11-15T10:59:16.456Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:25.722Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:27.515Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:28.024Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:28.249Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:28.460Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:28.579Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:28.698Z"}
+{"level":"info","message":"Incoming request: GET /","timestamp":"2024-11-15T10:59:28.817Z"}
+{"level":"info","message":"Incoming request: GET /metrics","timestamp":"2024-11-15T11:08:58.095Z"}

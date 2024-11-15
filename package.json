@@ -1,0 +1,17 @@
+{
+  "name": "grafana-loki-prometheus",
+  "version": "1.0.0",
+  "description": "### 1. Warum Monitoring und Logging wichtig sind - Warum ist es wichtig, Logs und Metriken in modernen Anwendungen zu überwachen? - Was könnten wir aus Logs und Metriken über das Verhalten eines Systems lernen?",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.21.1",
+    "prom-client": "^15.1.3",
+    "winston": "^3.17.0"
+  }
+}
