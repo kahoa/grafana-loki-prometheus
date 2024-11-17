@@ -1,17 +1,31 @@
-## 1. Schritt: Einrichten der EC2-Instanzen
+## 1. Schritt: Einrichten der EC2-Instanzen //erledigt mit Repo https://github.com/tarasowski/grafana-tutorials/blob/main/*intro.md
 - Erstelle zwei EC2-Instanzen, eine für Grafana, eine für die Anwendung (mit Loki und Promtail).
 - Erstelle eine dritte EC2-Instanz für Prometheus.
 - Alle sollen ein Ubuntu Image verwenden.
-### Grafana
+### Grafana //erledigt mit Repo https://github.com/tarasowski/grafana-tutorials/blob/main/*intro.md
 - Erstelle eine EC2-Instanz mit einem Ubuntu Image.
 - Installiere Grafana auf der Instanz.
+Grafana Install
+```
+#!/bin/bash
+sudo apt-get update
+sudo apt-get upgrade -yS
+sudo apt-get install -y software-properties-common wget
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install grafana -y
+sudo apt-get update
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server
+```
 - Öffne den Port 3000 für die Grafana-Oberfläche.
 - Erstelle eine Security Group, die den Port 3000 freigibt.
 - Starte Grafana und öffne die Oberfläche im Browser (public-ip:3000).
-### Anwendung
+### Anwendung //erledigt mit Repo https://github.com/tarasowski/grafana-tutorials/blob/main/*intro.md
 - Erstelle eine EC2-Instanz mit einem Ubuntu Image.
 - Installiere Loki und Promtail auf der Instanz.
-- Installiere nodejs und npm.
+- Installiere nodejs und npm. 
 - Kopiere die Anwendung auf die EC2-Instanz
 - Erstelle ein neues Node-Projekt und installiere die Abhängigkeiten.
 - Starte die Anwendung mit `node app.js`.
